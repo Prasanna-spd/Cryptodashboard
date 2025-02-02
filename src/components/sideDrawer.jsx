@@ -11,37 +11,33 @@ import {
   Button,
   Input,
 } from "@chakra-ui/react";
+import { SideNav } from "./sideNav";
 
-function SideDrawer({onOpen,isOpen,onClose}) {
-  
+function SideDrawer({ onOpen, isOpen, onClose }) {
   const btnRef = React.useRef();
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
-        Open
-      </Button>
       <Drawer
         isOpen={isOpen}
-        placement="right"
+        placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
 
-          <DrawerBody>
-            <Input placeholder="Type here..." />
+          <DrawerBody>{/* <Input placeholder="Type here..." /> */}
+          <SideNav/>
           </DrawerBody>
 
-          <DrawerFooter>
+          {/* <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
             <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
+          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </>

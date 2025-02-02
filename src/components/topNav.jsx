@@ -17,7 +17,7 @@ import { IoMenuSharp } from "react-icons/io5";
 
 function TopNav({title,onOpen}) {
   return (
-    <Box boxShadow="lg">
+    <Box boxShadow="lg" bg="white">
       <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
       <IconButton as={IoMenuSharp} onClick={onOpen}
         display={{

@@ -25,16 +25,21 @@ export const SideNav = () => {
     },
   ];
   return (
-    <Stack boxShadow="md" maxW="16rem" h="100vh" justify="space-between"
-    display={{
-      base:"none",
-      lg:"flex"
-    }}>
-     <Box>
-      <Heading textAlign="center" pt="12px" fontSize="20px" as="h1">
-        CryptoMonk
-      </Heading>
-     
+    <Stack
+      boxShadow={{
+        base: "none",
+        lg: "lg",
+      }}
+      maxW="16rem"
+      h="100vh"
+      justify="space-between"
+      bg="white"
+    >
+      <Box>
+        <Heading textAlign="center" pt="12px" fontSize="20px" as="h1">
+          CryptoMonk
+        </Heading>
+
         <Box mt="24px" mx="12px">
           {navLinks.map((nav) => (
             <HStack
