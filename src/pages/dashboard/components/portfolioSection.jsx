@@ -1,4 +1,4 @@
-import { Button, HStack, IconButton, Stack, Tag, Text } from "@chakra-ui/react";
+import { Button, HStack, Icon, IconButton, Stack, Tag, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { LuArrowDownToLine, LuArrowUpToLine } from "react-icons/lu";
@@ -64,10 +64,10 @@ function PortfolioSection() {
         </Stack>
       </HStack>
       <HStack>
-        <Button leftIcon={<IconButton as={LuArrowDownToLine} />}>
+        <Button leftIcon={<Icon as={LuArrowDownToLine} />}>
           Deposit
         </Button>
-        <Button leftIcon={<IconButton as={LuArrowUpToLine} />}>
+        <Button leftIcon={<Icon as={LuArrowUpToLine} />}>
           Withdrawl
         </Button>
       </HStack>
