@@ -10,6 +10,7 @@ import React from "react";
 import { RiDashboardFill } from "react-icons/ri";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export const SideNav = () => {
   const navLinks = [
@@ -42,8 +43,8 @@ export const SideNav = () => {
 
         <Box mt="24px" mx="12px">
           {navLinks.map((nav) => (
+            <Link key={nav.text} to={nav.link}>
             <HStack
-              key={nav.text}
               py="3"
               px="4"
               _hover={{
@@ -56,11 +57,13 @@ export const SideNav = () => {
               <IconButton as={nav.icon} />
               <Text fontSize="14px">{nav.text}</Text>
             </HStack>
+            </Link>
           ))}
         </Box>
       </Box>
 
       <Box mt="6" mx="3" mb="6">
+      <Link to="/support">
         <HStack
           borderRadius="10px"
           py="3"
@@ -76,6 +79,7 @@ export const SideNav = () => {
             Support
           </Text>
         </HStack>
+        </Link>
       </Box>
     </Stack>
   );
